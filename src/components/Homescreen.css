@@ -45,7 +45,6 @@
 }
 
 .home-wrapper {
-  /* background-color: var(--background-color); */
   color: var(--text-color);
   transition: all var(--transition-duration) ease-in-out;
 }

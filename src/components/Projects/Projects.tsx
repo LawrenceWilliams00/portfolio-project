@@ -22,7 +22,7 @@ const Projects = () => {
       title: "This Portfolio",
       description:
         "I designed and developed this portfolio website using TypeScript, React, CSS, and Express.js. \n\nMy goals for this project were to display some of my skills to potential employers, as well as to further my web development skills and experience",
-      link: "https://github.com/LawrenceWilliams00/portfolio",
+      link: "https://github.com/LawrenceWilliams00/portfolio-project",
       img: "/images/react-logo.jpg",
     },
     {

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./DarkModeSwitch.css";
 
 interface IDarkModeSwitch {
@@ -7,7 +7,7 @@ interface IDarkModeSwitch {
 }
 
 const DarkModeSwitch = ({ darkMode, setDarkMode }: IDarkModeSwitch) => {
-  const handleChange = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+  const handleChange = () => {
     document.body.classList.add(darkMode ? "dark" : "light");
     document.body.classList.remove(!darkMode ? "dark" : "light");
     setDarkMode(!darkMode);
@@ -19,8 +19,8 @@ const DarkModeSwitch = ({ darkMode, setDarkMode }: IDarkModeSwitch) => {
         className={` ${
           darkMode ? "toggle-box-on" : "toggle-box-off"
         } toggle-box`}
-        onClick={(e) => {
-          handleChange(e);
+        onClick={() => {
+          handleChange();
         }}
       >
         <div

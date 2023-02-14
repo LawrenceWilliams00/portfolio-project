@@ -46,7 +46,6 @@
   align-items: center;
   justify-content: center;
   border-radius: inherit;
-  /* background-color: black; */
   margin: 2em;
   overflow: hidden;
 }
@@ -88,7 +87,6 @@
   display: flex;
   flex-direction: column;
   overflow-y: auto;
-  /* border: 2px solid aqua; */
 }
 
 .project-card-title {

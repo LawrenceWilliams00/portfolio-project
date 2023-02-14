@@ -2,11 +2,7 @@ import React, { useState } from "react";
 import "./Contact.css";
 import LoadingSpinner from "./LoadingSpinner";
 import { useForm } from "react-hook-form";
-import { SubmitHandler } from "react-hook-form/dist/types";
 import emailjs from "@emailjs/browser";
-
-// import { NetlifyForm, Honeypot } from "react-netlify-forms";
-// import { sendEmail } from "@netlify/emails";
 
 interface IFormState {
   name: string;
@@ -30,7 +26,7 @@ const Contact = () => {
     handleSubmit,
   } = useForm<IFormState>();
 
-  const sendEmail = (formData: any) => {
+  const sendEmail = (formData: IFormState) => {
     setLoading(true);
     emailjs
       .send(
@@ -54,7 +50,7 @@ const Contact = () => {
       );
   };
 
-  const { name, email, message, sent } = formState;
+  const { sent } = formState;
 
   if (sent) {
     return (
@@ -131,15 +127,17 @@ const Contact = () => {
           </button>
         </form>
       )}
-      <div className="error-text">
-        Or send an email from your client to{" "}
-        <a
-          className="mail-to"
-          href={`mailto:lawriewilliams@gmail.com?body=${formState.message}`}
-        >
-          lawriewilliams@gmail.com
-        </a>
-      </div>
+      {!loading && (
+        <div className="error-text">
+          Or send an email from your client to{" "}
+          <a
+            className="mail-to"
+            href={`mailto:lawriewilliams@gmail.com?body=${formState.message}`}
+          >
+            lawriewilliams@gmail.com
+          </a>
+        </div>
+      )}
       {loading && <LoadingSpinner />}
     </div>
   );

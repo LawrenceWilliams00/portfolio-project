@@ -1,19 +1,10 @@
-import React, { useEffect, useLayoutEffect } from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import "./Home.css";
 
 interface IHome {
   setRef: (location: string) => void;
 }
-
-// let intro = "Hello";
-
-const onHover = (id: string) => {
-  const element = document.getElementById(id);
-  if (element !== null) {
-    element.style.backgroundColor = "red";
-  }
-};
 
 const Home = ({ setRef }: IHome) => {
   const [intro, setIntro] = useState("Hi!");
@@ -63,12 +54,16 @@ const Home = ({ setRef }: IHome) => {
           })}
         </div>
         <p className="intro-text">
-          I&apos;m<span className="home-name">{" Lawrence,"}</span>{" "}a software developer with a focus on
-          TypeScript and React.
+          I&apos;m<span className="home-name">{" Lawrence,"}</span> a software
+          developer with a focus on TypeScript and React.
         </p>
         <p>
           Please feel free to{" "}
-          <button className="email-link" onClick={() => setRef("contact")} onKeyDown={() => setRef("contact")}>
+          <button
+            className="email-link"
+            onClick={() => setRef("contact")}
+            onKeyDown={() => setRef("contact")}
+          >
             contact me
           </button>{" "}
           and lets talk!
