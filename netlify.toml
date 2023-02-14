@@ -1,0 +1,16 @@
+[build]
+  functions = "functions"
+  command = "REACT_APP_CONTEXT=$CONTEXT CI= npm run build"
+
+
+
+[[plugins]]
+  package = "@netlify/plugin-emails"
+
+[functions.emails]
+  included_files = ["emails/**"]
+
+[context.production.environment]
+  REACT_APP_HOST_URL = "https://lawrence1.netlify.app"
+[context.dev.environment]
+  REACT_APP_HOST_URL = "http://localhost:8888"
