@@ -22,7 +22,7 @@ const ProjectCard = (props: IProjectCard) => {
       role={"button"}
     >
       <div className={`${isFlipped ? "card-open" : ""} card `}>
-        <div className="front">
+        <div className={`front ${isFlipped ? "front-flipped" : "front"}`}>
           <div
             className="front-image"
             style={{ backgroundImage: `url(${props.image})` }}
