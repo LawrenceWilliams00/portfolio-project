@@ -18,7 +18,7 @@
   position: relative;
   transform-style: preserve-3d;
   transform: perspective(1000px) rotateY(var(--rotate-y, 0)) translateZ(-1px);
-  transition: all 0.5s ease-in-out;
+  transition: all 0.5s;
   position: relative;
   border: 2px solid var(--secondary-accent-color);
   -webkit-transform-style: preserve-3d;
