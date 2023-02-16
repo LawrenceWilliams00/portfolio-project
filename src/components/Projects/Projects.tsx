@@ -2,7 +2,7 @@ import React from "react";
 import ProjectCard from "./ProjectCard";
 import MobileProjectCard from "./MobileProjectCard";
 import "./Projects.css";
-import { isMobile } from "react-device-detect";
+import { isMobile, isBrowser } from "react-device-detect";
 
 interface IProject {
   title: string;
@@ -23,7 +23,7 @@ const Projects = () => {
     {
       title: "This Portfolio",
       description:
-        "I designed and developed this portfolio website using TypeScript, React, CSS, and Express.js. \n\nMy goals for this project were to display some of my skills to potential employers, as well as to further my web development skills and experience",
+        "I designed and developed this portfolio website using TypeScript, React, and CSS. \n\nMy goals for this project were to display some of my skills to potential employers, as well as to further my web development skills and experience",
       link: "https://github.com/LawrenceWilliams00/portfolio-project",
       img: "/images/react-logo.jpg",
     },
