@@ -50,6 +50,8 @@
   transition: all 0.5s;
   display: flex;
   flex-direction: column;
+  border-radius: 10%;
+
 }
 
 .mobile-card .back-open {
