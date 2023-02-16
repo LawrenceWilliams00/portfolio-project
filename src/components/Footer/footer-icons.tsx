@@ -22,7 +22,7 @@ export const LinkedInLogo = (props: ILogoProps) => {
 };
 
 export const GitHubLogo = (props: ILogoProps) => {
-  const { background, foreground } = props;
+  const { foreground } = props;
   return (
     <svg viewBox="0 0 128 128">
       <g fill={foreground}>
@@ -38,7 +38,7 @@ export const GitHubLogo = (props: ILogoProps) => {
 };
 
 export const CodePenLogo = (props: ILogoProps) => {
-  const { background, foreground } = props;
+  const { foreground } = props;
   return (
     <svg viewBox="0 0 128 128">
       <path
