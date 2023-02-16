@@ -44,7 +44,7 @@
   display: flex;
   align-items: center;
   min-width: 2em;
-  transition: all 0.5s ease-in-out;
+  /* transition: all 0.5s ease-in-out; */
 }
 
 .language-item {

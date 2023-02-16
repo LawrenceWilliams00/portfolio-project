@@ -1,6 +1,8 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
+import MobileProjectCard from "./MobileProjectCard";
 import "./Projects.css";
+import { isMobile } from "react-device-detect";
 
 interface IProject {
   title: string;
@@ -46,15 +48,27 @@ const Projects = () => {
       <div className="projects-title">Some of my projects:</div>
       <div className="projects">
         {projects.map((e) => {
-          return (
-            <ProjectCard
-              image={e.img}
-              title={e.title}
-              description={e.description}
-              link={e.link}
-              key={e.description}
-            />
-          );
+          if (isMobile) {
+            return (
+              <MobileProjectCard
+                image={e.img}
+                title={e.title}
+                description={e.description}
+                link={e.link}
+                key={e.description}
+              />
+            );
+          } else {
+            return (
+              <ProjectCard
+                image={e.img}
+                title={e.title}
+                description={e.description}
+                link={e.link}
+                key={e.description}
+              />
+            );
+          }
         })}
       </div>
     </div>

@@ -1,4 +1,4 @@
-.card-wrapper {
+.mobile-card-wrapper {
   min-width: 20em;
   max-width: 30em;
   width: 30%;
@@ -8,7 +8,7 @@
   --height: 30em;
 }
 
-.card {
+.mobile-card {
   display: flex;
   width: 100%;
   height: 100%;
@@ -16,38 +16,14 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  transform-style: preserve-3d;
-  transform: perspective(1000px) rotateY(var(--rotate-y, 0)) translateZ(-1px);
-  transition: all 0.5s ease-in-out;
   position: relative;
   border: 2px solid var(--secondary-accent-color);
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d;
+  overflow: hidden;
 }
 
-.card-open {
-  background-color: var(--accent-color);
-  --rotate-y: 180deg;
-}
-
-.front-flipped {
-  opacity: 0%;
-  transition-delay: 0.25s;
-}
-
-.flipped {
-  background-color: green;
-}
-
-.not-flipped {
-  background-color: red;
-}
-
-.card .front,
-.card .back {
+.mobile-card .front,
+.mobile-card .back {
   position: absolute;
-  backface-visibility: hidden;
   width: inherit;
   height: inherit;
   display: flex;
@@ -56,7 +32,6 @@
   border-radius: inherit;
   margin: 2em;
   overflow: hidden;
-  transition-delay: 0.25s;
 }
 
 .front-image {
@@ -68,16 +43,21 @@
   height: 100%;
 }
 
-.card .back {
-  transform: rotateY(180deg);
-}
-
-.back {
+.mobile-card .back {
+  background-color: var(--accent-color);
+  position: absolute;
+  transform: translateY(-105%);
+  transition: all 0.5s;
   display: flex;
   flex-direction: column;
 }
 
-.card-image {
+.mobile-card .back-open {
+  position: absolute;
+  transform: translateY(0%);
+}
+
+.mobile-card-image {
   opacity: 0.6;
   height: inherit;
   width: inherit;
@@ -85,13 +65,13 @@
   object-fit: cover;
 }
 
-.card-title {
+.mobile-card-title {
   font-weight: bolder;
   font-size: xx-large;
   position: absolute;
 }
 
-.card-back-text {
+.mobile-card-back-text {
   margin: 20px;
   display: flex;
   flex-direction: column;
@@ -108,7 +88,7 @@
   padding: 10px;
 }
 
-.card-link {
+.mobile-card-link {
   color: inherit;
   font-style: italic;
   text-decoration: underline;

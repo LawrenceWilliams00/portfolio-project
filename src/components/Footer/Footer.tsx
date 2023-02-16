@@ -48,9 +48,6 @@ const Footer = (props: IFooterProps) => {
         </div>
         <div className="footer-text">CodePen</div>
       </a>
-      {/* <div className="footer-item">
-        <div className="footer-text">Lawrence Williams 2023</div>
-      </div> */}
     </div>
   );
 };
