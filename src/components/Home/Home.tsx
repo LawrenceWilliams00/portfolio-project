@@ -73,7 +73,11 @@ const Home = ({ setRef }: IHome) => {
           download="LawrenceWilliamsCV"
           className="download-cv"
         >
-          Download my resume <div className="bucket"></div>
+          Download my resume{" "}
+          <div className="arrow-bucket-wrapper">
+            <div className="arrow">↓</div>
+            <div className="bucket"></div>
+          </div>
         </a>
       </div>
     </div>

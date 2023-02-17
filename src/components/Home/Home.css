@@ -99,18 +99,21 @@ p {
   transition: all 0.3s ease-in-out;
 }
 
-.download-cv::before {
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
+.arrow-bucket-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.arrow {
   position: absolute;
-  top: -1.5em;
-  left: 4.25em;
-  content: "↓";
-  font-size: larger;
-  border-radius: 0.5em;
-  transition: all 0.3s ease-in-out;
-  color: var(--text-color);
+  transform: translateY(-2em);
+  transition: all 0.25s ease;
+}
+
+.download-cv:hover .arrow {
+  transform: translateY(-0.3em);
 }
 
 .download-cv:hover.download-cv::before {
